@@ -8,7 +8,7 @@ export const openAIReq = async (imgKeywords: string) => {
     const openai = new OpenAIApi(configuration);
     const imgKeywordsStr = `
       Create a one-sentence description of a photo 
-      that has generated the following JSON data 
+      that has generated the following JSON data: 
       ${JSON.stringify(imgKeywords)}
     `;
     const completion = await openai.createChatCompletion({
